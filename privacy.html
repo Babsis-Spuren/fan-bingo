@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutzerklärung · Fan-Bingo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --terra:#C56838;--terraDeep:#9E4A24;--sandPale:#D6C4A8;--creamPale:#F4EBD7;
+  --ink:#1A140F;--inkSoft:#3A2C20;
+  --bg:#F4EBD7;--surface:#FAF3E0;--text:#1A140F;
+  --muted:rgba(26,20,15,.65);--subtle:rgba(26,20,15,.45);--border:rgba(26,20,15,.12);
+  --ff-d:'Fraunces',Georgia,serif;--ff-u:'Inter',system-ui,sans-serif;
+  --ff-m:ui-monospace,'SF Mono',Menlo,monospace;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#1A140F;--surface:#241A12;--text:#EBDDC4;
+  --muted:rgba(235,221,196,.65);--subtle:rgba(235,221,196,.45);--border:rgba(235,221,196,.12);
+  --terra:#E08A5A;--terraDeep:#C56838;
+}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--ff-u);background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 64px;}
+
+.header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 20px 14px;}
+.header-top{display:flex;align-items:center;justify-content:space-between;max-width:640px;margin:0 auto;}
+.back{font-family:var(--ff-m);font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--terra);text-decoration:none;}
+.lang-row{display:flex;gap:6px;}
+.lang-btn{font-family:var(--ff-m);font-size:10px;letter-spacing:1px;text-transform:uppercase;
+  padding:4px 9px;border-radius:6px;border:1px solid var(--border);
+  background:transparent;color:var(--muted);cursor:pointer;}
+.lang-btn.active{background:var(--terra);border-color:var(--terra);color:var(--creamPale);}
+@media(prefers-color-scheme:dark){.lang-btn.active{color:var(--ink);}}
+.header-title{font-family:var(--ff-d);font-size:26px;font-weight:600;letter-spacing:-.5px;
+  margin-top:10px;color:var(--text);max-width:640px;margin-left:auto;margin-right:auto;display:block;}
+
+.wrap{max-width:640px;margin:0 auto;padding:28px 20px;}
+.section{margin-bottom:32px;}
+.section-label{font-family:var(--ff-m);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--terra);margin-bottom:8px;}
+h2{font-family:var(--ff-d);font-size:18px;font-weight:600;letter-spacing:-.3px;margin-bottom:10px;color:var(--text);}
+p{font-size:15px;color:var(--muted);margin-bottom:10px;line-height:1.7;}
+p strong{color:var(--text);font-weight:600;}
+ul{padding-left:20px;margin-bottom:12px;}
+li{font-size:15px;color:var(--muted);margin-bottom:6px;line-height:1.6;}
+li strong{color:var(--text);font-weight:600;}
+a{color:var(--terra);}
+.highlight{background:rgba(197,104,56,.08);border-left:3px solid var(--terra);
+  padding:12px 16px;border-radius:0 10px 10px 0;margin-bottom:20px;}
+.highlight p{color:var(--text);margin:0;}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);
+  font-family:var(--ff-m);font-size:10px;letter-spacing:.8px;text-transform:uppercase;
+  color:var(--subtle);display:flex;gap:16px;flex-wrap:wrap;}
+footer a{color:var(--subtle);text-decoration:none;}
+footer a:hover{color:var(--terra);}
+
+[data-lang]{display:none;}
+[data-lang].visible{display:block;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <a href="index.html" class="back">← Fan-Bingo</a>
+    <div class="lang-row">
+      <button class="lang-btn active" id="btn-de" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+  <span class="header-title" id="page-title">Datenschutzerklärung</span>
+</div>
+
+<!-- ── DEUTSCH ── -->
+<div data-lang="de" class="visible">
+<div class="wrap">
+
+  <div class="highlight">
+    <p><strong>Kurzfassung:</strong> Fan-Bingo sammelt keine persönlichen Daten,
+    sendet nichts ins Internet und benötigt keinen Account.
+    Alle Inhalte, die du eingibst, bleiben ausschließlich auf deinem Gerät.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Angaben gemäß § 5 TMG</div>
+    <h2>1. Verantwortliche Person</h2>
+    <p>Diese App wird als privates, nicht-kommerzielles Projekt bereitgestellt.<br>
+    Bei Fragen zur Datenschutzerklärung wende dich bitte an:<br>
+    <strong>Barbara Hoffmann</strong><br>
+    <a href="mailto:fan-bingo@web.de">fan-bingo@web.de</a></p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Datenverarbeitung</div>
+    <h2>2. Welche Daten werden verarbeitet?</h2>
+    <p><strong>Fan-Bingo verarbeitet keine personenbezogenen Daten.</strong></p>
+    <p>Die App speichert ausschließlich Inhalte, die du selbst eingibst
+    (Künstlernamen, Kategorien, Songtitel, generierte Bingo-Karten und
+    Markierungen). Diese Daten werden lokal auf deinem Gerät gespeichert.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Internet</div>
+    <h2>3. Datenübertragung ans Internet</h2>
+    <p>Fan-Bingo überträgt <strong>keinerlei Daten</strong> an Server oder Dritte.
+    Die App funktioniert vollständig offline. Es gibt:</p>
+    <ul>
+      <li>Keine Nutzungsanalyse (kein Analytics, kein Firebase, kein Crashlytics)</li>
+      <li>Keine Werbung</li>
+      <li>Keine In-App-Käufe</li>
+      <li>Keine Konten, keine Registrierung</li>
+      <li>Keine Verbindung zu externen Diensten</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Export</div>
+    <h2>4. Exportfunktion</h2>
+    <p>Die App bietet eine freiwillige Export-Funktion: Du kannst deine
+    Kategorien und Songlisten als JSON-Datei exportieren und weitergeben.
+    <strong>Dieser Vorgang liegt vollständig in deiner Kontrolle</strong> –
+    die App selbst versendet nichts automatisch.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Berechtigungen</div>
+    <h2>5. App-Berechtigungen</h2>
+    <p>Fan-Bingo benötigt keine Geräteberechtigungen außer:</p>
+    <ul>
+      <li><strong>Speicher (intern):</strong> für die App-eigene Datenbank –
+      kein Zugriff auf externe Dateien oder andere Apps</li>
+    </ul>
+    <p>Kein Zugriff auf Kamera, Mikrofon, Standort, Kontakte oder Kalender.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Zielgruppe</div>
+    <h2>6. Kinder</h2>
+    <p>Fan-Bingo richtet sich nicht gezielt an Kinder unter 13 Jahren.
+    Da die App keinerlei personenbezogene Daten erhebt, bestehen keine
+    besonderen Risiken für jüngere Nutzer.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Deine Rechte</div>
+    <h2>7. Rechte nach DSGVO</h2>
+    <p>Da keine personenbezogenen Daten erhoben werden, entfallen
+    Auskunfts-, Berichtigungs- oder Löschpflichten im Sinne der DSGVO.
+    Alle App-Daten kannst du jederzeit selbst löschen, indem du die
+    App-Daten in den Einstellungen löschst oder die App deinstallierst.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Änderungen</div>
+    <h2>8. Änderungen dieser Erklärung</h2>
+    <p>Sollte sich die App wesentlich ändern, wird diese Seite aktualisiert.
+    Stand: Juni 2026.</p>
+  </div>
+
+  <footer>
+    <a href="index.html">← App</a>
+    <a href="readme.html">Anleitung</a>
+    <a href="impressum.html">Impressum</a>
+  </footer>
+
+</div>
+</div>
+
+<!-- ── ENGLISH ── -->
+<div data-lang="en">
+<div class="wrap">
+
+  <div class="highlight">
+    <p><strong>Summary:</strong> Fan-Bingo collects no personal data,
+    sends nothing to the internet, and requires no account.
+    All content you enter stays exclusively on your device.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Legal information</div>
+    <h2>1. Responsible person</h2>
+    <p>This app is provided as a private, non-commercial project.<br>
+    For questions about this privacy policy, please contact:<br>
+    <strong>Barbara Hoffmann</strong><br>
+    <a href="mailto:fan-bingo@web.de">fan-bingo@web.de</a></p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Data processing</div>
+    <h2>2. What data is processed?</h2>
+    <p><strong>Fan-Bingo does not process any personal data.</strong></p>
+    <p>The app only stores content you enter yourself (artist names, categories,
+    song titles, generated bingo cards and marks). This data is stored locally
+    on your device.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Internet</div>
+    <h2>3. Data transmission</h2>
+    <p>Fan-Bingo transmits <strong>no data whatsoever</strong> to servers or
+    third parties. The app works completely offline. There is:</p>
+    <ul>
+      <li>No usage analytics (no Analytics, no Firebase, no Crashlytics)</li>
+      <li>No advertising</li>
+      <li>No in-app purchases</li>
+      <li>No accounts, no registration</li>
+      <li>No connection to external services</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Export</div>
+    <h2>4. Export function</h2>
+    <p>The app offers a voluntary export function: you can export your categories
+    and song lists as a JSON file and share them.
+    <strong>This process is entirely under your control</strong> –
+    the app itself sends nothing automatically.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Permissions</div>
+    <h2>5. App permissions</h2>
+    <p>Fan-Bingo requires no device permissions except:</p>
+    <ul>
+      <li><strong>Internal storage:</strong> for the app's own database –
+      no access to external files or other apps</li>
+    </ul>
+    <p>No access to camera, microphone, location, contacts or calendar.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Audience</div>
+    <h2>6. Children</h2>
+    <p>Fan-Bingo is not specifically directed at children under 13 years of age.
+    As the app does not collect any personal data, there are no particular
+    risks for younger users.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Your rights</div>
+    <h2>7. Rights under GDPR</h2>
+    <p>Since no personal data is collected, there are no obligations to provide
+    information, correction or deletion under the GDPR. You can delete all app
+    data at any time by clearing the app data in your device settings or
+    uninstalling the app.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Changes</div>
+    <h2>8. Changes to this policy</h2>
+    <p>If the app changes significantly, this page will be updated.
+    Last updated: June 2026.</p>
+  </div>
+
+  <footer>
+    <a href="index.html">← App</a>
+    <a href="readme.html">Help</a>
+    <a href="impressum.html">Imprint</a>
+  </footer>
+
+</div>
+</div>
+
+<script>
+const titles = { de:'Datenschutzerklärung', en:'Privacy Policy' };
+function setLang(l){
+  document.querySelectorAll('[data-lang]').forEach(el=>el.classList.toggle('visible', el.dataset.lang===l));
+  document.getElementById('btn-de').classList.toggle('active', l==='de');
+  document.getElementById('btn-en').classList.toggle('active', l==='en');
+  document.getElementById('page-title').textContent = titles[l];
+  document.documentElement.lang = l;
+  localStorage.setItem('fanbingo_lang', l);
+}
+const saved = localStorage.getItem('fanbingo_lang')
+           || (navigator.language?.startsWith('en') ? 'en' : 'de');
+setLang(saved);
+</script>
+</body>
+</html>
