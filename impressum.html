@@ -43,12 +43,14 @@ h2{font-family:var(--ff-d);font-size:18px;font-weight:600;letter-spacing:-.3px;m
 p{font-size:15px;color:var(--muted);margin-bottom:10px;line-height:1.7;}
 p strong{color:var(--text);font-weight:600;}
 a{color:var(--terra);}
-.placeholder{display:inline-block;background:rgba(197,104,56,.12);border:1px dashed var(--terra);
-  border-radius:4px;padding:1px 6px;font-family:var(--ff-m);font-size:13px;
-  color:var(--terraDeep);letter-spacing:.5px;}
-.note{font-family:var(--ff-m);font-size:11px;letter-spacing:.5px;color:var(--subtle);
-  background:var(--surface);border:1px solid var(--border);border-radius:10px;
-  padding:12px 16px;margin-top:20px;line-height:1.6;}
+.copyright-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  padding:16px 18px;margin-bottom:8px;}
+.copyright-sign{font-family:var(--ff-d);font-size:22px;font-weight:600;color:var(--terra);
+  letter-spacing:-.3px;margin-bottom:4px;}
+.copyright-name{font-size:15px;color:var(--text);font-weight:600;}
+.copyright-year{font-family:var(--ff-m);font-size:11px;letter-spacing:1px;
+  text-transform:uppercase;color:var(--subtle);margin-top:2px;}
+.copyright-note{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.6;}
 footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);
   font-family:var(--ff-m);font-size:10px;letter-spacing:.8px;text-transform:uppercase;
   color:var(--subtle);display:flex;gap:16px;flex-wrap:wrap;}
@@ -80,9 +82,9 @@ footer a:hover{color:var(--terra);}
     <div class="section-label">Angaben gemäß § 5 TMG</div>
     <h2>Verantwortliche Person</h2>
     <p>
-      <strong><span>Barbara Hoffmann</span></strong><br>
-      <span>Gartenstr. 9</span><br>
-      <span>53520 Meuspath</span><br>
+      <strong>Barbara Hoffmann</strong><br>
+      Gartenstr. 9<br>
+      53520 Meuspath<br>
       Deutschland
     </p>
   </div>
@@ -91,7 +93,7 @@ footer a:hover{color:var(--terra);}
     <div class="section-label">Kontakt</div>
     <h2>Kontaktdaten</h2>
     <p>
-      E-Mail: <a href="mailto:fan-bingo@web.de"><span>fan-bingo@web.de</span></a>
+      E-Mail: <a href="mailto:fan-bingo@web.de">fan-bingo@web.de</a>
     </p>
     <p>Telefon ist keine Pflichtangabe bei privaten, nicht-kommerziellen Angeboten –
     E-Mail genügt.</p>
@@ -118,10 +120,21 @@ footer a:hover{color:var(--terra);}
     Diese App reproduziert keine geschützten Werke.</p>
   </div>
 
-  <div class="note">
-    ⚠ Platzhalter ersetzen: alle Felder mit gestricheltem Rahmen müssen durch echte Angaben
-    ersetzt werden, bevor diese Seite veröffentlicht wird.
-    Die Angaben sind gesetzlich vorgeschrieben (§ 5 TMG).
+  <div class="section">
+    <div class="section-label">Copyright</div>
+    <h2>Copyright-Hinweis</h2>
+    <div class="copyright-box">
+      <div class="copyright-sign">©</div>
+      <div class="copyright-name">Barbara Hoffmann</div>
+      <div class="copyright-year">2026 · Fan-Bingo</div>
+      <p class="copyright-note">
+        Design, Konzept und Code dieser App und Website sind urheberrechtlich geschützt.
+        Alle Rechte vorbehalten.<br><br>
+        Nutzergenerierte Inhalte (Kategorien, Songtitel) verbleiben im Eigentum
+        ihrer jeweiligen Urheber. Fan-Bingo erhebt keinen Anspruch auf
+        nutzergenerierte Inhalte.
+      </p>
+    </div>
   </div>
 
   <footer>
@@ -141,9 +154,9 @@ footer a:hover{color:var(--terra);}
     <div class="section-label">Legal Notice (Impressum)</div>
     <h2>Responsible Person</h2>
     <p>
-      <strong><span>Barbara Hoffmann</span></strong><br>
-      <span>Gartenstr. 9</span><br>
-      <span>53520 Meuspath</span><br>
+      <strong>Barbara Hoffmann</strong><br>
+      Gartenstr. 9<br>
+      53520 Meuspath<br>
       Germany
     </p>
     <p>This legal notice is required under German law (§ 5 TMG) for all websites
@@ -154,7 +167,7 @@ footer a:hover{color:var(--terra);}
     <div class="section-label">Contact</div>
     <h2>Contact details</h2>
     <p>
-      Email: <a href="mailto:fan-bingo@web.de"><span>fan-bingo@web.de</span></a>
+      Email: <a href="mailto:fan-bingo@web.de">fan-bingo@web.de</a>
     </p>
   </div>
 
@@ -175,9 +188,21 @@ footer a:hover{color:var(--terra);}
     This app does not reproduce any protected works.</p>
   </div>
 
-  <div class="note">
-    ⚠ Replace placeholders: all fields with a dashed border must be replaced with real
-    information before this page is published. The information is required by German law (§ 5 TMG).
+  <div class="section">
+    <div class="section-label">Copyright notice</div>
+    <h2>Copyright Notice</h2>
+    <div class="copyright-box">
+      <div class="copyright-sign">©</div>
+      <div class="copyright-name">Barbara Hoffmann</div>
+      <div class="copyright-year">2026 · Fan-Bingo</div>
+      <p class="copyright-note">
+        The design, concept and code of this app and website are protected by
+        copyright. All rights reserved.<br><br>
+        User-generated content (categories, song titles) remains the property
+        of their respective authors. Fan-Bingo makes no claim to
+        user-generated content.
+      </p>
+    </div>
   </div>
 
   <footer>
