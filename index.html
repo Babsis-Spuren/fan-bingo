@@ -153,6 +153,19 @@ body{font-family:var(--ff-u);background:var(--bg);color:var(--text);font-size:15
 <div id="app"></div>
 
 <script>
+// ── Embedded song data ───────────────────────────────────────────────────
+const SONGS_DATA = [
+  { name:"Traces",          max:5, main:true,  songs:["The One","Love Found Us","Keep Hope Alive","Crossfire","Got Your Back","Healing","Symphony of Peace","Run Free","Traces","Calcutta Angel","Wildflower","The Day My Daddy Died","Glorious"] },
+  { name:"B.O.A.T.S",       max:3, main:false, songs:["Boats","Running Blind","Throwback","Paragliding","Earthquake","The World","Thank You","Home","Best Bad Friend","Two Mothers","Good Morning Sunshine","Diamonds & Metals","Blurry Eyes","Fake Messiah","Beautiful Madness","Mother's Day","America","Icon","Boats – Reprise","Wonders","O.K.O","When Sorry Ain't Good Enough"] },
+  { name:"iD",              max:3, main:false, songs:["Golden Age","Higher Love","New Spirit","Run Jump Fly","Land of Bliss","Free","How Do You Love","Bigger Life","Roundabouts","Awake","iD","Friends R Family","Requiem","A Little Faith","So Beautiful","Lazarus","Last Words","Et Voilà","Talk to Me","Closer","Shake Away (Acoustic)"] },
+  { name:"Human",           max:3, main:false, songs:["Shake Away","Little Giants","Out of Touch","Renegade","Safe Hands","Beautiful Soul","Flag","Rose of Jericho (The Waltz)","Happiness","Here to Stay"] },
+  { name:"In Exile",        max:2, main:false, songs:["Living in the Line of Fire","Pray, Pray, Pray","No Fuzz, No Buzz, Back to Rock'n'Roll","Thanking Blessed Mary","Search for Truth","Hope","Money Making Machine","Rain of Roses","When You Sleep","Knick-Knack-Paddy-Wack","Movie"] },
+  { name:"RUAH",            max:2, main:false, songs:["Prologue","I Have Called You","Don't Judas Me","Abba! Father!","Ô Prends Mon Âme","Salve Regina (Latin)","RUAH","Walk the Line","Seinn Aililiú","Holy","Agape"] },
+  { name:"Old Songs",       max:2, main:false, songs:["One More Freakin' Dollar","Aresque","An Angel","House On The Ocean","Chickenpies","I Feel Love","Take My Hand","Mama","Calling Heaven","When The Last Tree…","Good Neighbor","Key To My Heart","Crisis","Looking For Love","Fell In Love With An Alien","Brother Brother","One More Song","Santa Maria"] },
+  { name:"Sing Meinen Song", max:2, main:false, songs:["Flüsterton","La Cintura","Die in Your Arms","Yipi","Leuchtturm","Borderline","Heimat","When She Dances","Love Goes On","MfG","Fender Freestyle"] },
+  { name:"Cover Songs",     max:2, main:false, songs:["Jokerman","Proud Mary","I'm On Fire","The Times They Are Changing","Sailing","All Who Are Thirsty (Come, Lord Jesus)","Don't Give Up","Amazing Grace","Motherless Child","Breaking Me","If I Should Fall Behind","Leaving On A Jet Plane","Hotel California","Space Oddity"] }
+];
+
 // ── i18n strings ──────────────────────────────────────────────────────────
 const I18N = {
   de: {
@@ -389,15 +402,7 @@ function selectSlot(i){ state.active=i; render(); }
 function setLang(l){ state.lang=l; saveState(); render(); }
 
 function newCard(){
-  // Load categories from localStorage (imported via JSON)
-  let cats = [];
-  try{ cats = JSON.parse(localStorage.getItem('fanbingo_cats')||'[]'); }catch(e){}
-  if(!cats.length){
-    alert(state.lang==='de'
-      ? 'Bitte zuerst eine JSON-Datei mit Kategorien importieren.'
-      : 'Please import a JSON file with categories first.');
-    return;
-  }
+  const cats = SONGS_DATA;
   const pool=[];
   cats.forEach(cat=>{
     shuffle(cat.songs).slice(0,cat.max).forEach(song=>
@@ -426,10 +431,6 @@ function resetMarks(){ const c=state.slots[state.active]; if(!c)return; c.marked
 function deleteCard(i){ state.slots[i]=null; if(state.active===i){ const f=state.slots.findIndex(s=>s!==null); state.active=f<0?0:f; } saveState(); render(); }
 function closeModal(){ state.modal=null; render(); }
 function dismissInstall(){ localStorage.setItem('fanbingo_install_dismissed','1'); render(); }
-
-// ── JSON import via URL hash (für mpk_loreley_2026.json o.Ä.) ────────────
-// Fans können die JSON-Datei über die Android-App oder per Datei-Import laden.
-// In der PWA: einfache Import-Funktion über ein verstecktes Input-Element.
 
 // ── Service Worker ────────────────────────────────────────────────────────
 if('serviceWorker' in navigator){ navigator.serviceWorker.register('sw.js').catch(()=>{}); }
